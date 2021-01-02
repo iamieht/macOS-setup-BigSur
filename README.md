@@ -77,3 +77,56 @@ In **iTerm2 > Preferences > Profiles:**
 
 - Copy Default Profile
 - Window: Columns 125 / Rows: 35
+
+**Oh My Zsh**
+
+- Install zsh
+
+```bash
+brew install zsh
+````
+
+- Install Oh My Zsh
+
+```bash
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+````
+
+- Install Powerline fonts
+
+```bash
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
+```
+
+- Install Meslo Nerd Font patched for Powerlevel10k
+
+Download these four ttf files:
+
+- [MesloLGS NF Regular.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Regular.ttf)
+- [MesloLGS NF Bold.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Bold.ttf)
+- [MesloLGS NF Italic.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Italic.ttf)
+- [MesloLGS NF Bold Italic.ttf](https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Bold%20Italic.ttf)
+
+Double-click on each file and press "Install". This will make MesloLGS NF font available to all applications on your system. Configure your terminal to use this font:
+
+- **iTerm2**: Type p10k configure, answer Yes when asked whether to install Meslo Nerd Font and restart iTerm2 for the changes to take effect. Alternatively, open iTerm2 → Preferences → Profiles → Text and set Font to MesloLGS NF.
+- **Visual Studio Code**: Open File → Preferences → Settings, enter terminal.integrated.fontFamily in the search box and set the value to MesloLGS NF.
+
+- Install Powerlevel10k theme
+
+Installation
+
+```bash
+brew install romkatv/powerlevel10k/powerlevel10k
+echo 'source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+If your .zshrc sets ZSH_THEME, remove that line.
+Restart Zsh
+Type p10k configure if the configuration wizard doesn't start automatically.
+````
+
+
+
