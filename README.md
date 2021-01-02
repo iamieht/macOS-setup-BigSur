@@ -128,5 +128,20 @@ Restart Zsh
 Type p10k configure if the configuration wizard doesn't start automatically.
 ````
 
+**vlc**
+
+```bash
+brew install --cask vlc
+````
+**Jdownloader**
+```bash
+brew install --cask jdownloader
+```
+**Browsers**
+```bash
+brew install --cask google-chrome firefox
+````
+
+
 
 
